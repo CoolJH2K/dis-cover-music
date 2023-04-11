@@ -7,7 +7,7 @@ bulmaCarousel.attach('#carousel-demo', {
 
 //Function that extracts search results 
 async function extractYoutubeResults(){
-    var searchResults = await getYoutubeList([`Linkin Park`, `In the End`, `Folk`, `Cover`]);
+    var searchResults = await getYoutubeList([`Linkin Park`, `In the End`, `Metal`, `Cover`]);
     console.log(searchResults);
 }
 
