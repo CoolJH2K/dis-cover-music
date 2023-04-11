@@ -1,9 +1,24 @@
 :root {
-  --darkestpurple: #210B2C;
-  --midpurple: #55286F;
-  --lightpurple: #BC96E6;
-  --pink: #D8B4E2;
-  --magenta: #AE759F;
+    --darkestpurple: #210B2C;
+    --midpurple: #55286F;
+    --lightpurple: #BC96E6;
+    --pink: #D8B4E2;
+    --magenta: #AE759F;
+}
+
+html {
+    background-color: var(--darkestpurple);
+}
+
+.spotify-container {
+    background-color: var(--darkestpurple);
+    display: flex;
+    gap: 30px;
+}
+
+.album-art {
+    height: 400px;
+    width: 400px;
 }
 
 header{
