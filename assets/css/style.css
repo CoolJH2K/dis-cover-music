@@ -9,7 +9,22 @@
 html {
     background-color: var(--darkestpurple);
 }
+#input-title {
+    color: white;
+}
+.input {
 
+  width: 250px;
+  background-color: rgb(175, 147, 199);
+}
+.bnt{
+  display: flex;
+  justify-content: center;
+  
+}
+.button{
+  margin-left: 10px;
+}
 .spotify-container {
     background-color: var(--darkestpurple);
     display: flex;
