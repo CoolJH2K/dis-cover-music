@@ -4,4 +4,5 @@ bulmaCarousel.attach('#carousel-demo', {
     pagination: false,
 });
 
-getYoutubeList([`Linkin Park`, `In the End`, `Folk`, `Cover`]);
+const searchResults =  getYoutubeList([`Linkin Park`, `In the End`, `Folk`, `Cover`]);
+console.log(searchResults);
