@@ -1,0 +1,64 @@
+:root {
+    --darkestpurple: #210B2C;
+    --midpurple: #55286F;
+    --lightpurple: #BC96E6;
+    --pink: #D8B4E2;
+    --magenta: #AE759F;
+}
+
+html {
+    background-color: var(--darkestpurple);
+    color: var(--lightpurple);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+h1 {
+    color: var(--lightpurple);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+}
+
+header {
+    background-color: black;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.intro-div {
+    background-color: var(--midpurple);
+    padding: 1rem;
+    color: var(--pink);
+    width: 40rem;
+    height: 25rem;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 40px;
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+}
+
+.custom-btn {
+    background-color: var(--lightpurple);
+    color: var(--darkestpurple);
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    top: 10rem;
+}
+
+.icon-holder {
+    position: relative;
+    top: 6rem;
+}
