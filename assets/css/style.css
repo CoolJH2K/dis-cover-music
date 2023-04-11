@@ -31,11 +31,6 @@ html {
     gap: 30px;
 }
 
-.album-art {
-    height: 400px;
-    width: 400px;
-}
-
 header{
 background-color: var(--darkestpurple);
 
