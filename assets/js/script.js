@@ -4,5 +4,13 @@ bulmaCarousel.attach('#carousel-demo', {
     pagination: false,
 });
 
-const searchResults =  getYoutubeList([`Linkin Park`, `In the End`, `Folk`, `Cover`]);
-console.log(searchResults);
+
+//Function that extracts search results 
+async function extractYoutubeResults(){
+    var searchResults = await getYoutubeList([`Linkin Park`, `In the End`, `Folk`, `Cover`]);
+    console.log(searchResults);
+}
+
+extractYoutubeResults();
+
+
