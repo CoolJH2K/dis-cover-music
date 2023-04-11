@@ -20,3 +20,25 @@ html {
     height: 400px;
     width: 400px;
 }
+
+header{
+background-color: var(--darkestpurple);
+
+}
+
+.title {
+  font-size: 50px;
+  color: white;
+  font-family: 'Permanent Marker', cursive;
+  padding-bottom: 8px;
+}
+.subtitle{
+  font-size: 35px;
+  color: var(--pink);
+  font-family: 'Permanent Marker', cursive;
+}
+.subtitle2{
+  font-size: 20px;
+  color: var(--lightpurple);
+  font-family: 'Permanent Marker', cursive;
+}
