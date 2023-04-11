@@ -1,12 +1,14 @@
 var queries =  [`beethoven`, `metal`];
 var apiKey = `AIzaSyCiqVdYUoHAulPgpR1T1ent_DTkeTlQ4aA`;
 
-function getData(searchQueries){
+
+
+//Function that return data according to our query
+function getYoutubeList(searchQueries){
     var formattedQueries = searchQueries.join(',');
-    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${formattedQueries}&order=relevance&maxResults=50&safeSearch=strict&key=${apiKey}`).
+    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${formattedQueries}&order=relevance&maxResults=25&safeSearch=strict&key=${apiKey}`).
     then(function(response){
         if(response.status === 200){
-            console.log("I'm ready");
             return response.json();
         }
         else{
@@ -17,4 +19,3 @@ function getData(searchQueries){
     })
 }
 
-getData(queries);

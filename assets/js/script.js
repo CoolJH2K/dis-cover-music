@@ -3,3 +3,5 @@ bulmaCarousel.attach('#carousel-demo', {
     slidesToShow: 4,
     pagination: false,
 });
+
+getYoutubeList([`Linconln Park`, `In the End`, `Folk`, `Cover`]);
