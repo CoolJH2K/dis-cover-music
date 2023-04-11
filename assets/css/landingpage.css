@@ -82,6 +82,30 @@ header {
 .icon-holder {
     position: relative;
     top: 6rem;
+
+.links {
+    display: flex;
+    flex: content;
+    text-align: center;
+    width: 100%;
+}
+
+/* footer ul {
+    display: flex;
+    text-align: center;
+} */
+
+footer ul li {
+    margin: 10px;
+}
+
+footer ul li a {
+    color: var(--lightpurple);
+    text-align: center;
+}
+
+footer ul li a:hover {
+    color: var(--pink);
 } */
 
 html,
@@ -175,4 +199,5 @@ button:focus::after {
         height: 300px;
         opacity: 0;
     }
+
 }
