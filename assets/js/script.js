@@ -2,6 +2,8 @@ var client_id = 'c0cb3e32a5f84f688b89b05ff48fd8f3';
 var client_secret = '71019c8014f843f79bd4f7bea6167a05';
 
 spotSearchButton = document.getElementById('spot-search-btn');
+albumArt = document.getElementById('album-cover');
+trackDetails = document.getElementById('track-details');
 
 var authOptions = {
     method: 'POST',
@@ -45,8 +47,14 @@ fetch('https://accounts.spotify.com/api/token', authOptions)
                         console.log('Search Results:', data);
                         // Clear previous results
                         document.getElementById('input-track').innerHTML = '';
-
-                        // Loop through search results and create list items
+                        // display album cover
+                        albumArt.src = data.tracks.items[0].album.images[1].url;
+                        // display track details
+                        trackDetails.innerHTML = `
+                            <h1>Track Title: ${data.tracks.items[0].name}</h1>
+                            <h2>Artist: ${data.tracks.items[0].artists[0].name}</h2>
+                            <h2>Album Name: ${data.tracks.items[0].album.name}</h2>
+                        `;
 
                     })
 
