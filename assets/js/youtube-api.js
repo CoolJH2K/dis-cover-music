@@ -6,7 +6,7 @@ async function getYoutubeList(searchQueries){
     var formattedQueries = searchQueries.join(',');
     
     //Fetch from a dynamically generated string
-    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${formattedQueries}&type=video&videoEmbeddable=true&order=relevance&maxResults=${maxResults}&safeSearch=strict&key=${apiKey}`)
+    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${formattedQueries},cover&type=video&videoEmbeddable=true&order=relevance&maxResults=${maxResults}&safeSearch=strict&key=${apiKey}`)
     const results = await response.json();
     return results;
 }

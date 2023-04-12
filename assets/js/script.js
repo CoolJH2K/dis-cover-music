@@ -152,8 +152,12 @@ async function extractYoutubeResults(queries) {
 }
 
 //Event listener for extracting the youtube result  
-document.addEventListener('keypress', function (event) {
-    if (event.key === '=') {
-        extractYoutubeResults([`Linkin Park`, `In the End`, `Metal`, `Cover`]);
+
+document.addEventListener('keypress', function(event){
+    if(event.key === '='){
+        var queryArray = document.querySelector(`#search-header`).textContent.split(` `);
+        console.log(queryArray);
+        extractYoutubeResults(queryArray);
+
     }
 })
