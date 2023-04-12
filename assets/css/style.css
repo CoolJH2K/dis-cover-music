@@ -171,7 +171,7 @@ footer ul li a:hover {
 }
 .menu{
   margin:50px auto;
-  width:800px;
+  width:fit-content;  /* 800px; */
   width:fit-content;  /* width:fit-content;*/
 }
 .menu > li{
