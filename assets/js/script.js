@@ -118,27 +118,30 @@ async function extractYoutubeResults(){
         var thumbnail = item.snippet.thumbnails.default.url;
         var videoCard = document.createElement(`div`);
         videoCard.classList.add(`m-1`);
+        
         videoCard.innerHTML = 
         `
-        <div class="m-1">
-            <div class="card">
-                <div class="card-image">
-                    <figure class="image is-4by3">
-                        <img src="${thumbnail}" alt="Placeholder image">
-                    </figure>
-                </div>
-                <div class="card-content">
-                    <!-- Add Youtube Data To Display here (?) -->
-                    <p class="">${videoTitle}</p>
-                </div>
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="${thumbnail}" alt="Placeholder image">
+                </figure>
+            </div>
+            <div class="card-content">
+                <!-- Add Youtube Data To Display here (?) -->
+                <p class="">${videoTitle}</p>
             </div>
         </div>
         `
         carouselEl.append(videoCard);
     });
 
-    
-    // <div class="item-1 m-1">
+    bulmaCarousel.attach('#carousel-demo', {
+        slidesToScroll: 1,
+        slidesToShow: 4,
+        pagination: false,
+    });
+    // <div class="m-1">
     //     <!-- Slide Content -->
     //     <div class="card">
     //     <div class="card-image">
