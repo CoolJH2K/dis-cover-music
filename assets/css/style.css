@@ -139,14 +139,14 @@ footer {
   color: var(--lightpurple);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding: 10px 10px 0px 10px;
-  position: absolute;
+  position: sticky;
   text-align: center;
   width: 100%;
 }
 
 footer ul {
-  display: inline-flex;
-  gap: 12rem;
+  display: flex;
+  justify-content: space-around;
 }
 
 footer ul li {
