@@ -4,6 +4,8 @@ var client_secret = '71019c8014f843f79bd4f7bea6167a05';
 spotSearchButton = document.getElementById('spot-search-btn');
 albumArt = document.getElementById('album-cover');
 trackDetails = document.getElementById('track-details');
+var carouselContainer = document.querySelector('.carousel-container')
+
 
 var authOptions = {
     method: 'POST',
@@ -13,6 +15,8 @@ var authOptions = {
     },
     body: 'grant_type=client_credentials'
 };
+
+
 
 fetch('https://accounts.spotify.com/api/token', authOptions)
     .then(response => response.json())
@@ -89,39 +93,61 @@ fetch('https://accounts.spotify.com/api/token', authOptions)
         console.error('Error:', error);
     });
 
+
+
+
 // add event listener to search button
 spotSearchButton.addEventListener('click', function () {
     searchSongs();
 });
 
 
+//Function that extracts search results 
+async function extractYoutubeResults(queries){
+    var searchResults = await getYoutubeList(queries);
+    console.log(searchResults);
+    carouselContainer.innerHTML = ``;
+    var newCarousel = document.createElement(`div`);
+    newCarousel.classList.add(`carousel`);
+    carouselContainer.append(newCarousel);
 
+    //For each video
+    searchResults.items.forEach(item => {
+        var videoTitle = item.snippet.title;
+        var thumbnail = item.snippet.thumbnails.high.url;
+        var videoId = item.id.videoId;
+        
+        var videoCard = document.createElement(`div`);
+        videoCard.classList.add(`m-1`);
+        videoCard.innerHTML = 
+        `
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="${thumbnail}" alt="Placeholder image">
+                </figure>
+            </div>
+            <div class="card-content">
+                <!-- Add Youtube Data To Display here (?) -->
+                <a href="https://www.youtube.com/watch?v=${videoId}"><p class="">${videoTitle}</p></a>
+            </div>
+        </div>
+        `
+        newCarousel.append(videoCard);
+    });
 
+    bulmaCarousel.attach('.carousel', {
+        slidesToScroll: 4,
+        slidesToShow: 4,
+        infinite: true,
+        pagination: false,
+    });
+    
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-bulmaCarousel.attach('#carousel-demo', {
-    slidesToScroll: 1,
-    slidesToShow: 4,
-    pagination: false,
-});
-
-getYoutubeList([`Linkin Park`, `In the End`, `Folk`, `Cover`]);
+//Event listener for extracting the youtube result  
+document.addEventListener('keypress', function(event){
+    if(event.key === '='){
+        extractYoutubeResults([`Linkin Park`, `In the End`, `Metal`, `Cover`]);
+    }
+})

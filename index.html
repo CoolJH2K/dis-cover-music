@@ -37,9 +37,11 @@
   <section>
     <div>
       <div class="column">
-        <div class="bnt">
+
+        <div class="bnt"> <!-- update btn to animated -->
         <input class="input is-primary is-rounded" type="text" id="input-track" placeholder="Track Name">
-        <button class="button is-primary is-light" id="spot-search-btn">Search</button> 
+
+  <button class="glow-on-hover" type="button" id="spot-search-btn">disCOVER</button> <!--test before push-->
         <div class="dropdown artist-drop is-hoverable">
         <div class="dropdown-trigger ">
           <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
@@ -55,6 +57,7 @@
               <!--Artists dynamically added here-->
             </div>
         </div>
+
       </div>
       </div>
      
@@ -70,6 +73,7 @@
   <section class="section" style="background-color: var(--magenta);">
     <div class="genre-box">
       <h2 class="genre-title">Title Me</h2><div class="dropdown genre is-hoverable ">
+      <div class="dropdown genre is-hoverable">
         <div class="dropdown-trigger is-light is-rounded">
           <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
             <span>Genre</span>
@@ -182,7 +186,35 @@
       </div>
       <!-- End Carousel -->
     </div>
+        </div>
+      </div>
+    <div class="container carousel-container" ></div>
+
   </section>
+  <footer>
+    <p>© Code Ninjas 2023</p>
+    <p>Powered by Spotify and YouTube</p>
+    <div class="links">
+      <ul>
+        <li>GitHub Links:</li>
+        <li class="github-accounts">
+          <a href="https://github.com/AlexC3105">AlexC3105</a>
+        </li>
+        <li class="github-accounts">
+          <a href="https://github.com/codemonkeyspoon">codemonkeyspoon</a>
+        </li>
+        <li class="github-accounts">
+          <a href="https://github.com/DavidPeguero">DavidPeguero</a>
+        </li>
+        <li class="github-accounts">
+          <a href="https://github.com/sweetkloid">sweetkloid</a>
+        </li>
+        <li class="github-accounts">
+          <a href="https:github.com/CoolJH2K">CoolJH2K</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
   <!-- Connecting youtube API functions so that they can be called from script.js -->
   <script src="assets/js/youtube-api.js"></script>
