@@ -38,7 +38,7 @@ margin-bottom: 65px;
 }
 .button{
   margin-left: 10px;
-} */
+} 
 
 .btn {
     margin: 0;
@@ -115,6 +115,7 @@ margin-bottom: 65px;
 .spotify-container {
     background-color: var(--darkestpurple);
     display: flex;
+    justify-content: center;
     gap: 30px;
 }
 
