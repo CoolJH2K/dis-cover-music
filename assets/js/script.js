@@ -4,7 +4,9 @@ var client_secret = '71019c8014f843f79bd4f7bea6167a05';
 spotSearchButton = document.getElementById('spot-search-btn');
 albumArt = document.getElementById('album-cover');
 trackDetails = document.getElementById('track-details');
+var carouselEl = document.getElementById('carousel-demo')
 
+//Adds bulma carousel properties to carousel in html 
 bulmaCarousel.attach('#carousel-demo', {
     slidesToScroll: 1,
     slidesToShow: 4,
@@ -106,27 +108,33 @@ spotSearchButton.addEventListener('click', function () {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Function that extracts search results 
 async function extractYoutubeResults(){
     var searchResults = await getYoutubeList([`Linkin Park`, `In the End`, `Metal`, `Cover`]);
-    searchResults.item.forEach(item => {
-        console.log(item.title)
+    console.log(searchResults);
+    carouselEl.innerHTML = '';
+    searchResults.items.forEach(item => {
+        var videoTitle = item.snippet.title;
+        var thumbnail = item.snippet.thumbnails.default.url;
+        var videoCard = document.createElement(`div`);
+        videoCard.classList.add(`m-1`);
+        videoCard.innerHTML = 
+        `
+        <div class="m-1">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="${thumbnail}" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <!-- Add Youtube Data To Display here (?) -->
+                    <p class="">${videoTitle}</p>
+                </div>
+            </div>
+        </div>
+        `
+        carouselEl.append(videoCard);
     });
 
     
@@ -147,9 +155,9 @@ async function extractYoutubeResults(){
     
 }
 
-
+//Event listener for extracting the youtube result  
 document.addEventListener('keypress', function(event){
     if(event.key === '='){
         extractYoutubeResults();
     }
-} )
+})
