@@ -37,32 +37,63 @@
   <section>
     <div>
       <div class="column">
+
         <div class="bnt"> <!-- update btn to animated -->
         <input class="input is-primary is-rounded" type="text" id="input-title" placeholder="Artist Name">
-  <!--      <button class="button is-primary is-light">Search</button> -->
 
   <button class="glow-on-hover" type="button">disCOVER</button> <!--test before push-->
+        <div class="dropdown artist-drop is-hoverable">
+        <div class="dropdown-trigger ">
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+            <span>Select Artist</span>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+          <div class="dropdown-content artist-list">
+              <!-- these link to whereever we want -->
+              <!--Artists dynamically added here-->
+            </div>
+        </div>
 
       </div>
+      </div>
+     
         <div class="spotify-container">
-          <img src="not-found.png" class="album-art" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique minus quidem possimus impedit, natus, delectus cum et, ipsum unde dolore dolorem quos rerum modi. Accusamus consectetur fugit nihil rerum laborum.
-            Unde iusto cum earum pariatur nulla amet dicta dignissimos quibusdam repellendus, quia suscipit rem quos necessitatibus modi dolorum nam illo quam explicabo fuga! Sit beatae perspiciatis aliquid autem consequuntur vel?
-            Perferendis dolor corporis praesentium fugit ratione quibusdam magni consequatur sint aperiam illum itaque, odit, neque adipisci necessitatibus cupiditate officiis? Unde sequi ratione aperiam esse excepturi mollitia fugiat laudantium assumenda aut.
-            Molestiae, eaque harum reprehenderit nemo rerum ipsum. Veniam fuga illum ipsam dolore sit expedita eveniet consectetur adipisci quidem cumque. Enim quidem possimus impedit inventore quis temporibus esse ducimus beatae id.
-            Nobis optio error rerum in hic blanditiis ea sunt natus repudiandae corporis fugiat esse eum cumque debitis aspernatur dolores recusandae quidem omnis temporibus numquam quisquam, doloribus iure quia ipsam! Nemo?
-            Non voluptatum tempora necessitatibus quam vitae unde, ipsam omnis repellendus a reiciendis dolore, temporibus voluptatibus sunt dignissimos facilis! Obcaecati sapiente beatae inventore consequuntur. Eos perspiciatis maiores quia enim voluptate id.
-            Facere, ad repellat voluptatem sapiente magni exercitationem. Porro possimus exercitationem blanditiis ducimus placeat odit tempora animi numquam, sequi maxime esse et nihil assumenda explicabo eos vero quam atque maiores recusandae?
-            Animi nihil consequuntur mollitia quibusdam vel molestiae odit necessitatibus, harum aliquid ratione, ad rerum cupiditate reiciendis asperiores ex laborum, optio excepturi quisquam. Maxime vel eveniet tenetur iure pariatur, veniam quisquam?
-            Reprehenderit iusto totam hic illum dignissimos officiis saepe ex odio delectus. Officia voluptas labore quia enim est facilis esse velit, voluptate, ducimus distinctio minima! Possimus cum quo unde maiores eligendi!
-            Numquam magni asperiores similique reiciendis quae. Enim beatae quo molestias rerum qui consequatur numquam cupiditate eius harum praesentium accusamus deleniti cumque exercitationem nemo, excepturi ipsum tempora quisquam voluptate aliquam eum!
+          <img src="" class="album-art" id="album-cover" />
+          <p id="track-details">
+            
           </p>
         </div>
       </div>
     </div>
   </section>
   <section class="section" style="background-color: var(--magenta);">
+      <div class="dropdown genre is-hoverable ">
+        <div class="dropdown-trigger is-light is-rounded">
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+            <span>Genre</span>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+          <div class="dropdown-content">
+            <div class="dropdown-item"> 
+              <!-- these link to whereever we want -->
+              <a href="#" class="dropdown-item"> 
+                Rock
+              </a>
+              <a href="#" class="dropdown-item"> 
+                Pop
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     <div class="container" >
       <!-- Start Carousel -->
       <div id="carousel-demo" class="carousel">
@@ -154,7 +185,32 @@
       <!-- End Carousel -->
     </div>
   </section>
+  <footer>
+    <p>© Code Ninjas 2023</p>
+    <p>Powered by Spotify and YouTube</p>
+    <div class="links">
+      <ul>GitHub Links:
+        <li class="github-accounts">
+          <a href="https://github.com/AlexC3105">AlexC3105</a>
+        </li>
+        <li class="github-accounts">
+          <a href="https://github.com/codemonkeyspoon">codemonkeyspoon</a>
+        </li>
+        <li class="github-accounts">
+          <a href="https://github.com/DavidPeguero">DavidPeguero</a>
+        </li>
+        <li class="github-accounts">
+          <a href="https://github.com/sweetkloid">sweetkloid</a>
+        </li>
+        <li class="github-accounts">
+          <a href="https:github.com/CoolJH2K">CoolJH2K</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+  <!-- Connecting youtube API functions so that they can be called from script.js -->
+  <script src="assets/js/youtube-api.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 
