@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,9 @@
   <!---Added Bulma here-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <!--- TODO: Add Font Awesome here-->
 
   <!-- Bulma Carousel Css -->
@@ -18,83 +19,98 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <title>dis-Cover Music</title>
 </head>
+
 <body>
   <header>
     <section class="hero container has-text-centered">
-    <div class="hero-body">
-      <p class="title">
-        dis-Cover Music
-      </p>
-      <p class="subtitle">
-        (re)dis-Cover the soundtrack of your life. 
-      </p>
-      <p class="subtitle2">
-        Have you been listening to the original song? Find out below.
-      </p>
-    </div>
-  </section>
+      <div class="hero-body">
+        <p class="title">
+          dis-Cover Music
+        </p>
+        <p class="subtitle">
+          (re)dis-Cover the soundtrack of your life.
+        </p>
+        <p class="subtitle2">
+          Have you been listening to the original song? Find out below.
+        </p>
+      </div>
+    </section>
   </header>
   <section>
     <div>
       <div class="column">
 
         <div class="bnt"> <!-- update btn to animated -->
-        <input class="input is-primary is-rounded" type="text" id="input-title" placeholder="Artist Name">
+          <input class="input is-primary is-rounded" type="text" id="input-title" placeholder="Artist Name">
 
-  <button class="glow-on-hover" type="button">disCOVER</button> <!--test before push-->
-        <div class="dropdown artist-drop is-hoverable">
-        <div class="dropdown-trigger ">
-          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-            <span>Select Artist</span>
-            <span class="icon is-small">
-              <i class="fas fa-angle-down" aria-hidden="true"></i>
-            </span>
-          </button>
-        </div>
-        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-          <div class="dropdown-content artist-list">
-              <!-- these link to whereever we want -->
-              <!--Artists dynamically added here-->
+          <button class="glow-on-hover" type="button">disCOVER</button> <!--test before push-->
+          <!-- work area below -->
+          <ul class="menu clearfix">
+            <li><a href="">Select Artist</a></li>
+            <li>
+              <ul class="submenu">
+                <li><a href="">Example 1</a></li>
+                <li><a href="">Example 2</a></li>
+                <li><a href="">Example 3</a></li>
+                <li><a href="">Example 4</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- end of work area -->
+          <div class="dropdown artist-drop is-hoverable">
+            <div class="dropdown-trigger ">
+              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                <span>Select Artist</span>
+                <span class="icon is-small">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
             </div>
+            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+              <div class="dropdown-content artist-list">
+                <!-- these link to whereever we want -->
+                <!--Artists dynamically added here-->
+              </div>
+            </div>
+
+          </div>
         </div>
 
-      </div>
-      </div>
-     
         <div class="spotify-container">
           <img src="" class="album-art" id="album-cover" />
           <p id="track-details">
-            
+
           </p>
         </div>
       </div>
     </div>
   </section>
   <section class="section" style="background-color: var(--magenta);">
-      <div class="dropdown genre is-hoverable ">
-        <div class="dropdown-trigger is-light is-rounded">
-          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-            <span>Genre</span>
-            <span class="icon is-small">
-              <i class="fas fa-angle-down" aria-hidden="true"></i>
-            </span>
-          </button>
-        </div>
-        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-          <div class="dropdown-content">
-            <div class="dropdown-item"> 
-              <!-- these link to whereever we want -->
-              <a href="#" class="dropdown-item"> 
-                Rock
-              </a>
-              <a href="#" class="dropdown-item"> 
-                Pop
-              </a>
-            </div>
+    <div class="dropdown genre is-hoverable ">
+      <div class="dropdown-trigger is-light is-rounded">
+        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+          <span>Genre</span>
+          <span class="icon is-small">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+        <div class="dropdown-content">
+          <div class="dropdown-item">
+            <!-- these link to whereever we want -->
+            <a href="#" class="dropdown-item">
+              Rock
+            </a>
+            <a href="#" class="dropdown-item">
+              Pop
+            </a>
           </div>
         </div>
       </div>
-    <div class="container" >
+    </div>
+    <div class="container">
       <!-- Start Carousel -->
       <div id="carousel-demo" class="carousel">
         <div class="item-1 m-1">
