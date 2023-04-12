@@ -60,6 +60,10 @@ fetch('https://accounts.spotify.com/api/token', authOptions)
           <h2 class="is-size-2 subtitle">Album Name: ${data.tracks.items[0].album.name}</h2>
         `;
 
+                        // Update query title with track name
+                        var queryTitle = document.getElementById('query-title');
+                        queryTitle.textContent = `${data.tracks.items[0].name}`;
+
                         // Populate the dropdown menu with artists
                         var dropdownContent = document.querySelector('.dropdown-content.artist-list');
                         dropdownContent.innerHTML = ''; // Clear previous artists
@@ -73,6 +77,8 @@ fetch('https://accounts.spotify.com/api/token', authOptions)
 
                                 // Add event listener to artist link
                                 artistLink.addEventListener('click', function () {
+                                    // Update query title based on selected artist
+                                    queryTitle.innerHTML = `${track.name} ${artist.name}`;
                                     // Update album art and track details based on selected artist
                                     albumArt.src = track.album.images[1].url;
                                     trackDetails.innerHTML = `
@@ -80,6 +86,7 @@ fetch('https://accounts.spotify.com/api/token', authOptions)
                 <h2 class="is-size-2 subtitle">Artist: ${artist.name}</h2>
                 <h2 class="is-size-2 subtitle">Album Name: ${track.album.name}</h2>
               `;
+
                                 });
                             });
                         });
@@ -95,7 +102,6 @@ fetch('https://accounts.spotify.com/api/token', authOptions)
 
 
 
-
 // add event listener to search button
 spotSearchButton.addEventListener('click', function () {
     searchSongs();
@@ -103,7 +109,7 @@ spotSearchButton.addEventListener('click', function () {
 
 
 //Function that extracts search results 
-async function extractYoutubeResults(queries){
+async function extractYoutubeResults(queries) {
     var searchResults = await getYoutubeList(queries);
     console.log(searchResults);
     carouselContainer.innerHTML = ``;
@@ -116,11 +122,11 @@ async function extractYoutubeResults(queries){
         var videoTitle = item.snippet.title;
         var thumbnail = item.snippet.thumbnails.high.url;
         var videoId = item.id.videoId;
-        
+
         var videoCard = document.createElement(`div`);
         videoCard.classList.add(`m-1`);
-        videoCard.innerHTML = 
-        `
+        videoCard.innerHTML =
+            `
         <div class="card">
             <div class="card-image">
                 <figure class="image is-4by3">
@@ -142,14 +148,16 @@ async function extractYoutubeResults(queries){
         infinite: true,
         pagination: false,
     });
-    
+
 }
 
 //Event listener for extracting the youtube result  
+
 document.addEventListener('keypress', function(event){
     if(event.key === '='){
         var queryArray = document.querySelector(`#search-header`).textContent.split(` `);
         console.log(queryArray);
         extractYoutubeResults(queryArray);
+
     }
 })
