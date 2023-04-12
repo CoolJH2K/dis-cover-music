@@ -39,8 +39,32 @@
       <div class="column">
         <div class="bnt">
         <input class="input is-primary is-rounded" type="text" id="input-track" placeholder="Track Name">
-        <button class="button is-primary is-light" id="spot-search-btn">Search</button>
+        <button class="button is-primary is-light" id="spot-search-btn">Search</button> 
+        <div class="dropdown artist-drop is-hoverable">
+        <div class="dropdown-trigger ">
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+            <span>Hover me</span>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+          <div class="dropdown-content">
+            <div class="dropdown-item"> 
+              <!-- these link to whereever we want -->
+              <a href="#" class="dropdown-item"> 
+                Tester
+              </a>
+              <a href="#" class="dropdown-item"> 
+                Tester 2
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+      </div>
+     
         <div class="spotify-container">
           <img src="" class="album-art" id="album-cover" />
           <p id="track-details">
@@ -51,6 +75,29 @@
     </div>
   </section>
   <section class="section" style="background-color: var(--magenta);">
+      <div class="dropdown genre is-hoverable ">
+        <div class="dropdown-trigger is-light is-rounded">
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+            <span>Genre</span>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+          <div class="dropdown-content">
+            <div class="dropdown-item"> 
+              <!-- these link to whereever we want -->
+              <a href="#" class="dropdown-item"> 
+                Rock
+              </a>
+              <a href="#" class="dropdown-item"> 
+                Pop
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     <div class="container" >
       <!-- Start Carousel -->
       <div id="carousel-demo" class="carousel">

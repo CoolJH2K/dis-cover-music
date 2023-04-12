@@ -17,10 +17,16 @@ html {
   width: 250px;
   background-color: rgb(175, 147, 199);
 }
-.bnt{
+.bnt, artist-drop{
   display: flex;
   justify-content: center;
   
+}
+/* issue if this is moved to center, the drop down results does not follow */
+.genre{ 
+display: flex;
+justify-content: flex-start;
+margin-bottom: 65px;
 }
 .button{
   margin-left: 10px;
