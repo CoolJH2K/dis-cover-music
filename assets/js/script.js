@@ -55,9 +55,9 @@ fetch('https://accounts.spotify.com/api/token', authOptions)
                         albumArt.src = data.tracks.items[0].album.images[1].url;
                         // display track details
                         trackDetails.innerHTML = `
-          <h1>Track Title: ${data.tracks.items[0].name}</h1>
-          <h2>Artist: ${data.tracks.items[0].artists[0].name}</h2>
-          <h2>Album Name: ${data.tracks.items[0].album.name}</h2>
+          <h1 class="is-size-2 subtitle">Track Title: ${data.tracks.items[0].name}</h1>
+          <h2 class="is-size-2 subtitle">Artist: ${data.tracks.items[0].artists[0].name}</h2>
+          <h2 class="is-size-2 subtitle">Album Name: ${data.tracks.items[0].album.name}</h2>
         `;
 
                         // Populate the dropdown menu with artists
@@ -76,9 +76,9 @@ fetch('https://accounts.spotify.com/api/token', authOptions)
                                     // Update album art and track details based on selected artist
                                     albumArt.src = track.album.images[1].url;
                                     trackDetails.innerHTML = `
-                <h1>Track Title: ${track.name}</h1>
-                <h2>Artist: ${artist.name}</h2>
-                <h2>Album Name: ${track.album.name}</h2>
+                <h1 class="is-size-2 subtitle">Track Title: ${track.name}</h1>
+                <h2 class="is-size-2 subtitle">Artist: ${artist.name}</h2>
+                <h2 class="is-size-2 subtitle">Album Name: ${track.album.name}</h2>
               `;
                                 });
                             });
