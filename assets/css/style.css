@@ -25,8 +25,11 @@ html {
 /* issue if this is moved to center, the drop down results does not follow */
 .genre{ 
 display: flex;
-justify-content: flex-start;
+justify-content: center;
 margin-bottom: 65px;
+}
+.menu{
+  display: inline-flex;
 }
 .button{
   margin-left: 10px;
