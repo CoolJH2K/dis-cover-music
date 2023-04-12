@@ -5,6 +5,12 @@ spotSearchButton = document.getElementById('spot-search-btn');
 albumArt = document.getElementById('album-cover');
 trackDetails = document.getElementById('track-details');
 
+bulmaCarousel.attach('#carousel-demo', {
+    slidesToScroll: 1,
+    slidesToShow: 4,
+    pagination: false,
+});
+
 var authOptions = {
     method: 'POST',
     headers: {
@@ -13,6 +19,8 @@ var authOptions = {
     },
     body: 'grant_type=client_credentials'
 };
+
+
 
 fetch('https://accounts.spotify.com/api/token', authOptions)
     .then(response => response.json())
@@ -89,6 +97,9 @@ fetch('https://accounts.spotify.com/api/token', authOptions)
         console.error('Error:', error);
     });
 
+
+
+
 // add event listener to search button
 spotSearchButton.addEventListener('click', function () {
     searchSongs();
@@ -111,28 +122,14 @@ spotSearchButton.addEventListener('click', function () {
 
 
 
-
-
-
-
-
-
-
-bulmaCarousel.attach('#carousel-demo', {
-    slidesToScroll: 1,
-    slidesToShow: 4,
-    pagination: false,
-});
-
-
 //Function that extracts search results 
 async function extractYoutubeResults(){
     var searchResults = await getYoutubeList([`Linkin Park`, `In the End`, `Metal`, `Cover`]);
-    var videos = searchResults.list;
-
-    videos.forEach(video => {
-        
+    searchResults.item.forEach(item => {
+        console.log(item.title)
     });
+
+    
     // <div class="item-1 m-1">
     //     <!-- Slide Content -->
     //     <div class="card">
@@ -150,6 +147,9 @@ async function extractYoutubeResults(){
     
 }
 
-extractYoutubeResults();
 
-
+document.addEventListener('keypress', function(event){
+    if(event.key === '='){
+        extractYoutubeResults();
+    }
+} )

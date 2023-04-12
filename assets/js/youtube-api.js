@@ -1,4 +1,4 @@
-var apiKey = `AIzaSyCiqVdYUoHAulPgpR1T1ent_DTkeTlQ4aA`;
+var apiKey = `AIzaSyDwXtAC4JZDSdDm-_sqJflusdNuRln6Cfk`;
 var maxResults = 10;
 //Function that return data according to our query
 async function getYoutubeList(searchQueries){
@@ -10,4 +10,3 @@ async function getYoutubeList(searchQueries){
     const results = await response.json();
     return results;
 }
-
