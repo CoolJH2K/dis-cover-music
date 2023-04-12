@@ -6,12 +6,6 @@ albumArt = document.getElementById('album-cover');
 trackDetails = document.getElementById('track-details');
 var carouselContainer = document.querySelector('.carousel-container')
 
-//Adds bulma carousel properties to carousel in html 
-bulmaCarousel.attach('.carousel', {
-    slidesToScroll: 1,
-    slidesToShow: 4,
-    pagination: false,
-});
 
 var authOptions = {
     method: 'POST',
@@ -116,9 +110,11 @@ async function extractYoutubeResults(queries){
     var newCarousel = document.createElement(`div`);
     newCarousel.classList.add(`carousel`);
     carouselContainer.append(newCarousel);
+
+    //For each video
     searchResults.items.forEach(item => {
         var videoTitle = item.snippet.title;
-        var thumbnail = item.snippet.thumbnails.default.url;
+        var thumbnail = item.snippet.thumbnails.high.url;
         var videoId = item.id.videoId;
         
         var videoCard = document.createElement(`div`);
