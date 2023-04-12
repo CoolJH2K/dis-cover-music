@@ -76,10 +76,20 @@
                       </ul>
                     </li>
                   </ul>
-
                   <i class="fas fa-angle-down" aria-hidden="true"></i>
                 </span>
               </button>
+        <input class="input is-primary is-rounded" type="text" id="input-track" placeholder="Track Name">
+  <button class="glow-on-hover" type="button" id="spot-search-btn">disCOVER</button> <!--test before push-->
+        <div class="dropdown artist-drop is-hoverable">
+        <div class="dropdown-trigger ">
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+            <span>Select Artist</span>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
             </div>
             <div class="dropdown-menu" id="dropdown-menu4" role="menu">
               <div class="dropdown-content artist-list">
@@ -87,20 +97,16 @@
                 <!--Artists dynamically added here-->
               </div>
             </div> 
-
-          </div>
-        </div>
-
-        <div class="spotify-container">
+     
+        <div class="spotify-container section"
           <img src="" class="album-art" id="album-cover" />
-          <p id="track-details">
-
-          </p>
+          <p id="track-details"></p>
         </div>
       </div>
     </div>
   </section>
   <section class="section" style="background-color: var(--magenta);">
+
     <div class="dropdown genre is-hoverable ">
       <div class="dropdown-trigger is-light is-rounded">
         <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
@@ -113,113 +119,41 @@
       <div class="dropdown-menu" id="dropdown-menu4" role="menu">
         <div class="dropdown-content">
           <div class="dropdown-item">
-            <!-- these link to whereever we want -->
-            <a href="#" class="dropdown-item">
-              Rock
-            </a>
-            <a href="#" class="dropdown-item">
-              Pop
-            </a>
+
+    <div class="genre-box">
+      <h2 class="genre-title" id="search-header">Title Me</h2>
+      <div class="dropdown genre is-hoverable">
+        <div class="dropdown-trigger is-light is-rounded">
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+            <span>Genre</span>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+          <div class="dropdown-menu menu" id="dropdown-menu4" role="menu">
+            <div class="dropdown-content is-align">
+             <div class="dropdown-item"> 
+                <!-- these link to whereever we want -->
+                <a href="#" class="dropdown-item"> 
+                Rock
+                </a>
+                <a href="#" class="dropdown-item"> 
+                Pop
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
     </div>
-    <div class="container">
-      <!-- Start Carousel -->
-      <div id="carousel-demo" class="carousel">
-        <div class="item-1 m-1">
-          <!-- Slide Content -->
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <!-- Add Youtube Data To Display here (?) -->
-              <p class="">Sample title</p>
-            </div>
-          </div>
-        </div>
-        <div class="item-2 m-1">
-          <!-- Slide Content -->
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <!-- Add Youtube Data To Display here (?) -->
-              <p class="">Sample title</p>
-            </div>
-          </div>
-        </div>
-        <div class="item-3 m-1">
-          <!-- Slide Content -->
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <!-- Add Youtube Data To Display here (?) -->
-              <p class="">Sample title</p>
-            </div>
-          </div>
-        </div>
-        <div class="item-4 m-1">
-          <!-- Slide Content -->
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <!-- Add Youtube Data To Display here (?) -->
-              <p class="">Sample title</p>
-            </div>
-          </div>
-        </div>
-        <div class="item-5 m-1">
-          <!-- Slide Content -->
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <!-- Add Youtube Data To Display here (?) -->
-              <p class="">Sample title</p>
-            </div>
-          </div>
-        </div>
-        <div class="item-6 m-1">
-          <!-- Slide Content -->
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <!-- Add Youtube Data To Display here (?) -->
-              <p class="">Sample title</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End Carousel -->
-    </div>
+    <div class="container carousel-container" ></div>
   </section>
   <footer>
     <p>© Code Ninjas 2023</p>
     <p>Powered by Spotify and YouTube</p>
     <div class="links">
-      <ul>GitHub Links:
+      <ul>
+        <li>GitHub Links:</li>
         <li class="github-accounts">
           <a href="https://github.com/AlexC3105">AlexC3105</a>
         </li>
