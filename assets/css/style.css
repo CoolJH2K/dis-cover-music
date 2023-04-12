@@ -24,15 +24,16 @@ html {
   
 }
 /* issue if this is moved to center, the drop down results does not follow */
-.genre{ 
+.genre-box{ 
 display: flex;
 justify-content: center;
-margin-bottom: 65px;
+margin-bottom: 55px;
+}
+.genre{
+ padding: 8px;
 }
 
 .genre-title{
-  display: flex;
-  justify-content: center;
   font-size: 45px;
   font-family: 'Permanent Marker';
 }
