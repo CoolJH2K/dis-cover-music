@@ -30,7 +30,7 @@ justify-content: center;
 margin-bottom: 55px;
 }
 .genre{
- padding: 8px;
+ padding-top: 15px;
 }
 
 .genre-title{
@@ -39,7 +39,7 @@ margin-bottom: 55px;
 }
 .button{
   margin-left: 10px;
-} */
+} 
 
 .btn {
     margin: 0;
