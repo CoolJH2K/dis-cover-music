@@ -9,6 +9,9 @@
 html {
     background-color: var(--darkestpurple);
 }
+.spotify-box{
+  background-color: rgb(28, 2, 49);
+}
 #input-title {
     color: white;
 }
@@ -24,7 +27,7 @@ html {
   
 }
 /* issue if this is moved to center, the drop down results does not follow */
-.genre-box{ 
+.genre-box{
 display: flex;
 justify-content: center;
 margin-bottom: 55px;
@@ -34,6 +37,7 @@ margin-bottom: 55px;
 }
 
 .genre-title{
+  color: var(--lightpurple);
   font-size: 45px;
   font-family: 'Permanent Marker';
 }
@@ -114,7 +118,6 @@ margin-bottom: 55px;
 }
 
 .spotify-container {
-    background-color: var(--darkestpurple);
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -123,6 +126,9 @@ margin-bottom: 55px;
 header{
 background-color: var(--darkestpurple);
 
+}
+.carousel-box{
+  background-color: rgb(31, 2, 55);
 }
 
 .title {
