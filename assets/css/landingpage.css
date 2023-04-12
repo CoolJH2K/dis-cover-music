@@ -48,15 +48,16 @@ header {
 
 .footer {
     color: var(--teal);
+    position: fixed;
     padding: 10px 10px 0px 10px;
+    bottom: 0;
     width: 100%;
     /* Height of the footer*/
+    height: 50px;
     background: black;
     text-align: center;
     font-family: Roboto;
-    position: absolute;
-    bottom: 0;
-
+    
 }
 
 
@@ -85,30 +86,6 @@ header {
 .icon-holder {
     position: relative;
     top: 6rem;
-
-.links {
-    display: flex;
-    flex: content;
-    text-align: center;
-    width: 100%;
-}*/
-
- ul {
-    display: inline-flex;
-    gap: 12rem;
-}
-
-footer ul li {
-    margin: 10px;
-}
-
-footer ul li a {
-    color: var(--lightpurple);
-    text-align: center;
-}
-
-.footer ul li a:hover {
-    color: var(--pink);
 } */
 
 html,
@@ -202,5 +179,4 @@ button:focus::after {
         height: 300px;
         opacity: 0;
     }
-
 }
