@@ -30,6 +30,7 @@ margin-bottom: 65px;
 }
 .menu{
   display: inline-flex;
+  margin-left: 435px;
 }
 .genre-title{
   display: flex;
