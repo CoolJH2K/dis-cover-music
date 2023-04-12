@@ -4,10 +4,10 @@ var client_secret = '71019c8014f843f79bd4f7bea6167a05';
 spotSearchButton = document.getElementById('spot-search-btn');
 albumArt = document.getElementById('album-cover');
 trackDetails = document.getElementById('track-details');
-var carouselEl = document.getElementById('carousel-demo')
+var carouselContainer = document.querySelector('.carousel-container')
 
 //Adds bulma carousel properties to carousel in html 
-bulmaCarousel.attach('#carousel-demo', {
+bulmaCarousel.attach('.carousel', {
     slidesToScroll: 1,
     slidesToShow: 4,
     pagination: false,
@@ -109,16 +109,20 @@ spotSearchButton.addEventListener('click', function () {
 
 
 //Function that extracts search results 
-async function extractYoutubeResults(){
-    var searchResults = await getYoutubeList([`Linkin Park`, `In the End`, `Metal`, `Cover`]);
+async function extractYoutubeResults(queries){
+    var searchResults = await getYoutubeList(queries);
     console.log(searchResults);
-    carouselEl.innerHTML = '';
+    carouselContainer.innerHTML = ``;
+    var newCarousel = document.createElement(`div`);
+    newCarousel.classList.add(`carousel`);
+    carouselContainer.append(newCarousel);
     searchResults.items.forEach(item => {
         var videoTitle = item.snippet.title;
         var thumbnail = item.snippet.thumbnails.default.url;
+        var videoId = item.id.videoId;
+        
         var videoCard = document.createElement(`div`);
         videoCard.classList.add(`m-1`);
-        
         videoCard.innerHTML = 
         `
         <div class="card">
@@ -129,38 +133,25 @@ async function extractYoutubeResults(){
             </div>
             <div class="card-content">
                 <!-- Add Youtube Data To Display here (?) -->
-                <p class="">${videoTitle}</p>
+                <a href="https://www.youtube.com/watch?v=${videoId}"><p class="">${videoTitle}</p></a>
             </div>
         </div>
         `
-        carouselEl.append(videoCard);
+        newCarousel.append(videoCard);
     });
 
-    bulmaCarousel.attach('#carousel-demo', {
-        slidesToScroll: 1,
+    bulmaCarousel.attach('.carousel', {
+        slidesToScroll: 4,
         slidesToShow: 4,
+        infinite: true,
         pagination: false,
     });
-    // <div class="m-1">
-    //     <!-- Slide Content -->
-    //     <div class="card">
-    //     <div class="card-image">
-    //         <figure class="image is-4by3">
-    //         <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-    //         </figure>
-    //     </div>
-    //     <div class="card-content">
-    //         <!-- Add Youtube Data To Display here (?) -->
-    //         <p class="">Sample title</p>
-    //     </div>
-    //     </div>
-    // </div>
     
 }
 
 //Event listener for extracting the youtube result  
 document.addEventListener('keypress', function(event){
     if(event.key === '='){
-        extractYoutubeResults();
+        extractYoutubeResults([`Linkin Park`, `In the End`, `Metal`, `Cover`]);
     }
 })
