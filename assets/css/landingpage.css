@@ -27,23 +27,22 @@ h1 {
 
 header {
     background-color: black;
-    padding: 1rem;
-    margin-bottom: 2rem;
+    padding: .5rem;
+    margin-bottom: .5rem;
     font-family: Roboto;
 }
 
 .intro-div {
-    /*    background-color: var(--midpurple) transparent; */
+    /* background-color: var(--midpurple) transparent; */
     padding: 1rem;
     color: var(--teal);
     width: 40rem;
     height: 25rem;
     text-align: center;
     font-size: 1.5rem;
-    border-radius: 40px;
-    font-family: Permanent Marker;
-    font-family: Lora, serif;
-
+    border-radius: 10px;
+    font-family: Roboto;  /* <<< Font for readability */
+   
 }
 
 .footer {
@@ -56,50 +55,22 @@ header {
     font-family: Roboto;
     position: absolute;
     bottom: 0;
+    font-family: Roboto;
 
 }
-
-
 
 .column {
     display: flex;
     justify-content: center;
 }
 
-
-
-/* .custom-btn {
-    background-color: var(--lightpurple);
-    color: var(--darkestpurple);
-    border: none;
-    border-radius: 5px;
-    padding: 1rem;
-    margin: 1rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-    cursor: pointer;
-    position: relative;
-    top: 10rem;
-}
-
-.icon-holder {
-    position: relative;
-    top: 6rem;
-
-.links {
-    display: flex;
-    flex: content;
-    text-align: center;
-    width: 100%;
-}*/
-
- ul {
+ul {
     display: inline-flex;
-    gap: 12rem;
+    gap: 5rem;
 }
 
 footer ul li {
-    margin: 10px;
+    margin: 3px;
 }
 
 footer ul li a {
@@ -109,7 +80,7 @@ footer ul li a {
 
 .footer ul li a:hover {
     color: var(--pink);
-} */
+}
 
 html,
 body {
@@ -202,5 +173,4 @@ button:focus::after {
         height: 300px;
         opacity: 0;
     }
-
 }
