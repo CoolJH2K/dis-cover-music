@@ -31,6 +31,12 @@ margin-bottom: 65px;
 .menu{
   display: inline-flex;
 }
+.genre-title{
+  display: flex;
+  justify-content: center;
+  font-size: 45px;
+  font-family: 'Permanent Marker';
+}
 .button{
   margin-left: 10px;
 }
