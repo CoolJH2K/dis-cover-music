@@ -148,6 +148,8 @@ background-color: var(--darkestpurple);
   font-family: 'Permanent Marker', cursive;
 }
 
+
+
 footer {
   background: var(--darkestpurple);
   bottom: 0;
@@ -175,6 +177,10 @@ footer ul li a {
 
 footer ul li a:hover {
   color: var(--pink);
+}
+.return-home{
+  display: flex;
+  justify-content: right;
 }
 
 /* work area below */
