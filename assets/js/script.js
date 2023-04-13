@@ -161,3 +161,10 @@ document.addEventListener('keypress', function(event){
 
     }
 })
+
+const button = document.querySelector('.return-home');
+
+button.addEventListener('click', function() {
+  window.location.href = 'homepage.html';
+});
+
