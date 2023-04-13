@@ -180,7 +180,7 @@ footer ul li a:hover {
 }
 .return-home{
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 
 /* work area below */
