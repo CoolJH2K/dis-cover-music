@@ -1,4 +1,4 @@
-var apiKey = `AIzaSyDwXtAC4JZDSdDm-_sqJflusdNuRln6Cfk`;
+var apiKey = `AIzaSyDxtdMbk6LZWLUD55kDbiZK9yd5vcBCBJw`;
 var maxResults = 10;
 //Function that return data according to our query
 async function getYoutubeList(searchQueries){

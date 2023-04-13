@@ -163,6 +163,29 @@ async function extractYoutubeResults(queries) {
 
 }
 
+// event listener for genre dropdown
+var genreDropdown = document.querySelector('.genre');
+genreDropdown.addEventListener('click', function (event) {
+    // Get current query title
+    var queryTitle = document.getElementById('query-title').textContent;
+    // Get previously selected genre
+    var previousGenre = document.querySelector('.genre .dropdown-item.selected');
+    // If there is a previously selected genre, remove it from query title
+    if (previousGenre) {
+        var genreToRemove = previousGenre.textContent;
+        queryTitle = queryTitle.replace(genreToRemove, '');
+        previousGenre.classList.remove('selected');
+    }
+    // Append selected genre to query title
+    queryTitle += ' ' + event.target.textContent;
+    // Update query title with appended genre
+    document.getElementById('query-title').textContent = queryTitle;
+    // Add 'selected' class to newly selected genre
+    event.target.classList.add('selected');
+    // Update carousel with new query title
+    updateCarousel();
+});
+
 //Function that gets query title and updates carousel with said value
 function updateCarousel(){
     var queryArray = document.getElementById(`query-title`).textContent.split(` `);
@@ -175,3 +198,4 @@ const button = document.querySelector('.return-home');
 button.addEventListener('click', function() {
   window.location.href = 'homepage.html';
 });
+
