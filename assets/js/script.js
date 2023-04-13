@@ -18,6 +18,8 @@ var authOptions = {
 
 
 
+
+
 fetch('https://accounts.spotify.com/api/token', authOptions)
     .then(response => response.json())
     .then(data => {
@@ -70,7 +72,7 @@ fetch('https://accounts.spotify.com/api/token', authOptions)
                         data.tracks.items.forEach(function (track) {
                             track.artists.forEach(function (artist) {
                                 var artistLink = document.createElement('a');
-                                artistLink.href = '#';
+                                artistLink.href = '#!';
                                 artistLink.className = 'dropdown-item artist';
                                 artistLink.textContent = artist.name;
                                 dropdownContent.appendChild(artistLink);
@@ -79,6 +81,7 @@ fetch('https://accounts.spotify.com/api/token', authOptions)
                                 artistLink.addEventListener('click', function () {
                                     // Update query title based on selected artist
                                     queryTitle.innerHTML = `${track.name} ${artist.name}`;
+                                    setTimeout(updateCarousel,500);
                                     // Update album art and track details based on selected artist
                                     albumArt.src = track.album.images[1].url;
                                     trackDetails.innerHTML = `
@@ -105,28 +108,35 @@ fetch('https://accounts.spotify.com/api/token', authOptions)
 // add event listener to search button
 spotSearchButton.addEventListener('click', function () {
     searchSongs();
+    //Set Timeout to make sure query title is changed before we update carousel
+    setTimeout(updateCarousel,500);
 });
 
 
 //Function that extracts search results 
 async function extractYoutubeResults(queries) {
+    // Return data from response
     var searchResults = await getYoutubeList(queries);
     console.log(searchResults);
+    //Empties out carousel container
     carouselContainer.innerHTML = ``;
     var newCarousel = document.createElement(`div`);
     newCarousel.classList.add(`carousel`);
     carouselContainer.append(newCarousel);
 
-    //For each video
+    //For each video create a card with a thumbnail and title
     searchResults.items.forEach(item => {
+        //Get data from the item returned before
         var videoTitle = item.snippet.title;
         var thumbnail = item.snippet.thumbnails.high.url;
         var videoId = item.id.videoId;
 
+        //Create a div to contain the card
         var videoCard = document.createElement(`div`);
         videoCard.classList.add(`m-1`);
+        //Create the card
         videoCard.innerHTML =
-            `
+        `
         <div class="card">
             <div class="card-image">
                 <figure class="image is-4by3">
@@ -139,9 +149,11 @@ async function extractYoutubeResults(queries) {
             </div>
         </div>
         `
+        //Append to the carousel the card
         newCarousel.append(videoCard);
     });
 
+    //After building all the card, initialize the carousel
     bulmaCarousel.attach('.carousel', {
         slidesToScroll: 4,
         slidesToShow: 4,
@@ -151,20 +163,15 @@ async function extractYoutubeResults(queries) {
 
 }
 
-//Event listener for extracting the youtube result  
-
-document.addEventListener('keypress', function(event){
-    if(event.key === '='){
-        var queryArray = document.querySelector(`#query-title`).textContent.split(` `);
-        console.log(queryArray);
-        extractYoutubeResults(queryArray);
-
-    }
-})
+//Function that gets query title and updates carousel with said value
+function updateCarousel(){
+    var queryArray = document.getElementById(`query-title`).textContent.split(` `);
+    console.log(queryArray);
+    extractYoutubeResults(queryArray);
+}
 
 const button = document.querySelector('.return-home');
 
 button.addEventListener('click', function() {
   window.location.href = 'homepage.html';
 });
-
