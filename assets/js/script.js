@@ -115,23 +115,28 @@ spotSearchButton.addEventListener('click', function () {
 
 //Function that extracts search results 
 async function extractYoutubeResults(queries) {
+    // Return data from response
     var searchResults = await getYoutubeList(queries);
     console.log(searchResults);
+    //Empties out carousel container
     carouselContainer.innerHTML = ``;
     var newCarousel = document.createElement(`div`);
     newCarousel.classList.add(`carousel`);
     carouselContainer.append(newCarousel);
 
-    //For each video
+    //For each video create a card with a thumbnail and title
     searchResults.items.forEach(item => {
+        //Get data from the item returned before
         var videoTitle = item.snippet.title;
         var thumbnail = item.snippet.thumbnails.high.url;
         var videoId = item.id.videoId;
 
+        //Create a div to contain the card
         var videoCard = document.createElement(`div`);
         videoCard.classList.add(`m-1`);
+        //Create the card
         videoCard.innerHTML =
-            `
+        `
         <div class="card">
             <div class="card-image">
                 <figure class="image is-4by3">
@@ -144,9 +149,11 @@ async function extractYoutubeResults(queries) {
             </div>
         </div>
         `
+        //Append to the carousel the card
         newCarousel.append(videoCard);
     });
 
+    //After building all the card, initialize the carousel
     bulmaCarousel.attach('.carousel', {
         slidesToScroll: 4,
         slidesToShow: 4,
