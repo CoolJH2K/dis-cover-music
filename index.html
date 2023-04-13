@@ -40,69 +40,31 @@
     <div>
       <div class="column">
 
-        <div class="bnt"> <!-- update btn to animated -->
-          <input class="input is-primary is-rounded" type="text" id="input-title" placeholder="Artist Name">
-
-          <button class="glow-on-hover" type="button">disCOVER</button> <!--test before push-->
-          <!-- work area below -->
-
-     <!--     <ul class="menu clearfix">
-            <li><a href="">Select Artist</a></li>
-            <li>
-              <ul class="submenu">
-                <li><a href="">Example 1</a></li>
-                <li><a href="">Example 2</a></li>
-                <li><a href="">Example 3</a></li>
-                <li><a href="">Example 4</a></li>
-              </ul>
-            </li>
-          </ul>  -->
-
-          <!-- end of work area -->
-         <div class="dropdown artist-drop is-hoverable">
-            <div class="dropdown-trigger">
-              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-               <!--- <span>Select Artist</span>
-                <span class="icon is-small"> -->
-
-                  <ul class="menu clearfix">
-                    <li><a href="">Select Artist</a></li>
-                    <li>
-                      <ul class="submenu">
-                        <li><a href="">Example 1</a></li>
-                        <li><a href="">Example 2</a></li>
-                        <li><a href="">Example 3</a></li>
-                        <li><a href="">Example 4</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
         <input class="input is-primary is-rounded" type="text" id="input-track" placeholder="Track Name">
-  <button class="glow-on-hover" type="button" id="spot-search-btn">disCOVER</button> <!--test before push-->
+        <button class="glow-on-hover" type="button" id="spot-search-btn">disCOVER</button> <!--test before push-->
         <div class="dropdown artist-drop is-hoverable">
-        <div class="dropdown-trigger ">
-          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-            <span>Select Artist</span>
-            <span class="icon is-small">
-              <i class="fas fa-angle-down" aria-hidden="true"></i>
-            </span>
-          </button>
+          <div class="dropdown-trigger ">
+            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+              <span>Select Artist</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
         </div>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-              <div class="dropdown-content artist-list">
-                <!-- these link to whereever we want -->
-                <!--Artists dynamically added here-->
-              </div>
-            </div> 
-     
-        <div class="spotify-container section"
-          <img src="" class="album-art" id="album-cover" />
-          <p id="track-details"></p>
+        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+          <div class="dropdown-content artist-list">
+            <!-- these link to whereever we want -->
+            <!--Artists dynamically added here-->
+          </div>
         </div>
       </div>
+    </div>
+    <div class="spotify-container section">
+      <img src="" class="album-art" id="album-cover" />
+      <p id="track-details"></p>
+    </div>
+    </div>
     </div>
   </section>
   <section class="section">
@@ -124,7 +86,7 @@
         </div>
       </div>
     </div>
-    <div class="container carousel-container" ></div>
+    <div class="container carousel-container"></div>
   </section>
   <footer>
     <p>© Code Ninjas 2023</p>
