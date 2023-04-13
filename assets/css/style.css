@@ -185,9 +185,8 @@ footer ul li a:hover {
   list-style:none;
 }
 .menu{
-  margin:50px auto;
-  width:fit-content;  /* 800px; */
-  width:fit-content;  /* width:fit-content;*/
+  margin: auto; /* 800px; */
+  width: fit-content;  /* width:fit-content;*/
 }
 .menu > li{
   background:#34495e;

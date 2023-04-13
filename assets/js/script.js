@@ -155,7 +155,7 @@ async function extractYoutubeResults(queries) {
 
 document.addEventListener('keypress', function(event){
     if(event.key === '='){
-        var queryArray = document.querySelector(`#search-header`).textContent.split(` `);
+        var queryArray = document.querySelector(`#query-title`).textContent.split(` `);
         console.log(queryArray);
         extractYoutubeResults(queryArray);
 
