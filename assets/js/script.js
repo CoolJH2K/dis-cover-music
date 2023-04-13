@@ -72,7 +72,7 @@ fetch('https://accounts.spotify.com/api/token', authOptions)
                         data.tracks.items.forEach(function (track) {
                             track.artists.forEach(function (artist) {
                                 var artistLink = document.createElement('a');
-                                artistLink.href = '#';
+                                artistLink.href = '#!';
                                 artistLink.className = 'dropdown-item artist';
                                 artistLink.textContent = artist.name;
                                 dropdownContent.appendChild(artistLink);
@@ -81,6 +81,7 @@ fetch('https://accounts.spotify.com/api/token', authOptions)
                                 artistLink.addEventListener('click', function () {
                                     // Update query title based on selected artist
                                     queryTitle.innerHTML = `${track.name} ${artist.name}`;
+                                    setTimeout(updateCarousel,500);
                                     // Update album art and track details based on selected artist
                                     albumArt.src = track.album.images[1].url;
                                     trackDetails.innerHTML = `
@@ -158,7 +159,7 @@ async function extractYoutubeResults(queries) {
 //Function that gets query title and updates carousel with said value
 function updateCarousel(){
     var queryArray = document.getElementById(`query-title`).textContent.split(` `);
-        console.log(queryArray);
-        extractYoutubeResults(queryArray);
+    console.log(queryArray);
+    extractYoutubeResults(queryArray);
 }
 
