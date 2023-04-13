@@ -18,6 +18,8 @@ var authOptions = {
 
 
 
+
+
 fetch('https://accounts.spotify.com/api/token', authOptions)
     .then(response => response.json())
     .then(data => {
@@ -105,6 +107,8 @@ fetch('https://accounts.spotify.com/api/token', authOptions)
 // add event listener to search button
 spotSearchButton.addEventListener('click', function () {
     searchSongs();
+    //Set Timeout to make sure query title is changed before we update carousel
+    setTimeout(updateCarousel,500);
 });
 
 
@@ -151,13 +155,10 @@ async function extractYoutubeResults(queries) {
 
 }
 
-//Event listener for extracting the youtube result  
-
-document.addEventListener('keypress', function(event){
-    if(event.key === '='){
-        var queryArray = document.querySelector(`#query-title`).textContent.split(` `);
+//Function that gets query title and updates carousel with said value
+function updateCarousel(){
+    var queryArray = document.getElementById(`query-title`).textContent.split(` `);
         console.log(queryArray);
         extractYoutubeResults(queryArray);
+}
 
-    }
-})
