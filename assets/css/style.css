@@ -1,3 +1,4 @@
+/* color scheme for project */
 :root {
     --darkestpurple: #210B2C;
     --midpurple: #55286F;
@@ -6,42 +7,62 @@
     --magenta: #AE759F;
     --teal: #0BF6E4;
 }
-
 .hero-body {
   padding: 1rem;
 }
-
-
-html {
-    background-color:var(--darkestpurple); /*   */
+/* header section */
+header{
+background-color: var(--darkestpurple);
 }
+.title {
+  font-size: 50px;
+  color: var(--teal);
+  font-family: 'Roboto';
+  padding-bottom: 5px;
+}
+.subtitle{
+  font-size: 35px;
+  color: var(--teal);
+  font-family: 'Roboto';
+}
+.subtitle2{
+  font-size: 20px;
+  color: var(--teal);
+  font-family: 'Roboto';
+}
+/* begining of the spotify api section */
 .spotify-box{
   background-color: var(--darkestpurple); /* rgb(28, 2, 49)  */
 }
-#input-title {
-    color: white;
+/* discover button before hover */
+#spot-search-btn{
+  border: 1px dotted #285f76;
+  margin-left: -55px;
+  font-size: 20px;
+  font-family: bolder,'Give You Glory';
+
 }
+
+/* input box */
 .input {
-
-  width: 350px;
+  width: 475px;
+  height: 50;
   background-color: var(--lightpurple);
+  color:black;
+  font-family: bolder,'Give You Glory';
 }
-
-.bnt, artist-drop{
+/* locks input and bnt in center of page */
+.bnt{
   display: flex;
   justify-content: center;
   
 }
-/* issue if this is moved to center, the drop down results does not follow */
+/* section holding the artist and genre buttons */
 .genre-box{
 display: flex;
 justify-content: center;
 margin-bottom: 55px;
 }
-.genre{
- padding-top: 15px;
-}
-
 .genre-title{
   color: var(--lightpurple);
   font-size: 45px;
@@ -62,159 +83,24 @@ margin-bottom: 55px;
     align-items: center;
     background: var(--midpurple);
 }
-
-.glow-on-hover {
-    width: 150px;
-    height: 40px;
-    border: none;
-    outline: none;
-    color: var(--teal);
-    background: var(--midpurple);
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 30px;
-}
-
-.glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 30px;
-}
-
-.glow-on-hover:active {
-    color: #000
-}
-
-.glow-on-hover:active:after {
-    background: transparent;
-}
-
-.glow-on-hover:hover:before {
-    opacity: 1;
-}
-
-.glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: var(--lightpurple);
-    left: 0;
-    top: 0;
-    border-radius: 30px;
-}
-
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
-}
-
 .spotify-container {
     display: flex;
     justify-content: center;
     gap: 30px;
 }
-
-header{
-background-color: var(--darkestpurple);
-
-}
-.carousel-box{
-  background-color: black;
-}
-
-.title {
-  font-size: 50px;
-  color: var(--teal);
-  font-family: 'Roboto';
-  padding-bottom: 5px;
-}
-.subtitle{
-  font-size: 35px;
-  color: var(--teal);
-  font-family: 'Roboto';
-}
-.subtitle2{
-  font-size: 20px;
-  color: var(--teal);
-  font-family: 'Roboto';
-}
-
-
-
-footer {
-  background: var(--darkestpurple);
-  bottom: 0;
-  color: var(--teal);
-  font-family: Roboto;
-  padding: 10px 10px 0px 10px;
-  position: sticky;
-  text-align: center;
-  width: 100%;
-}
-
-footer ul {
-  display: flex;
-  justify-content: space-around;
-}
-
-footer ul li {
-  margin: 10px;
-}
-
-footer ul li a {
-  color: var(--lightpurple);
-  text-align: center;
-}
-
-footer ul li a:hover {
-  color: var(--pink);
-}
-.return-home{
-  display: flex;
-  justify-content: center;
-}
-
-.button1 {
+/* artist button */
+.button1, .button2 {
   width: 250px;
   height: 40px;
   justify-content: center;
   align-items: center;
+  margin-left: 10px;
   border-radius: 30px;
-  background: var(--midpurple);
-  font-size: large;
-  font-family: 'Roboto';
-  color: var(--teal);
+  background: var(--lightpurple);
+  font-size: 25px;
+  font-family: bolder,'Give You Glory';
+  border: 1px dotted #285f76 ;
 }
-
-.button2 {
-  width: 250px;
-  height: 40px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30px;
-  background: var(--midpurple);
-  font-size: large;
-  font-family: 'Roboto';
-  color: var(--teal);
-}
-
-
-/* work area below */
 
 .menu,.submenu{
   margin:0;
@@ -310,7 +196,110 @@ footer ul li a:hover {
 .menu > li:hover .submenu li:nth-child(even){
 	transform: skewX(25deg) translateX(15px);			
 } 
+/* special affects on hover */
+.glow-on-hover {
+    width: 150px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: black;
+    background: var(--lightpurple);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 30px;
+}
+/* ranbow effect on hover when they click */
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 30px;
+}
 
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+/* when they remove click */
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--lightpurple);
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+.carousel-box{
+  background-color: rgb(31, 2, 55);
+}
+/* putting home button in center */
+.return-home{
+  display: flex;
+  justify-content: center;
+  
+}
+/* edits to home button */
+.home{
+  font-size: 25px;
+  font-family: bolder,'Give You Glory';
+  border: 1px dotted #285f76;
+}
+/* footer background and sticking it to botton of frame */
+footer {
+  background: var(--darkestpurple);
+  bottom: 0;
+  color: var(--teal);
+  font-family: Roboto;
+  padding: 10px 10px 0px 10px;
+  position: sticky;
+  text-align: center;
+  width: 100%;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer ul li {
+  margin: 10px;
+}
+
+footer ul li a {
+  color: var(--lightpurple);
+  text-align: center;
+}
+
+footer ul li a:hover {
+  color: var(--pink);
+}
 
 
 /* clearfix */
@@ -325,3 +314,4 @@ footer ul li a:hover {
 .clearfix{
   *zoom: 1; 
 } 
+
