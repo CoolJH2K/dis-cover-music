@@ -7,119 +7,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!---Added Bulma here-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-
+  <!-- Added custom fonts via Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-  <!--- TODO: Add Font Awesome here-->
-
-  <!-- Bulma Carousel Css -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lora:ital@1&display=swap" rel="stylesheet">
   <!--Our own css-->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <title>dis-Cover Music</title>
+  <link rel="stylesheet" href="./assets/css/landingpage.css">
+  <title>Home Page</title>
 </head>
 
 <body>
   <header>
-    <section class="hero container has-text-centered"> <!-- hero adjustments  -->
-      <div class="hero-body">
-        <p class="title">
-          dis-Cover Music
-        </p>
-        <p class="subtitle">
-          (re)dis-Cover the soundtrack of your life.
-        </p>
-        <p class="subtitle2">
-          Have you been listening to the original song? Find out below.
-        </p>
-      </div>
-    </section>
+    <div class="header">
+      <h1> dis-Cover Music </h1>
+    </div>
   </header>
-  <section class="spotify-box">
-    <div>
-      <div class="column">
-        <div class="bnt"> <!-- update btn to animated -->
-          <input class="input is-primary is-rounded" type="text" id="input-track" placeholder="Track Name">
+  <main>
+    <div class="column">
+      <div class="intro-div">
+        <h2>!!! Re.dis-Cover Your Music !!!</h2>
+        <!-- Mission statement -->
+        <h4>At dis-Cover Music, our mission is to help everyone discover new music in a fun way. We believe that music
+          is a fundamental part of life and should be enjoyed by everyone.</h4>
 
-          <button class="glow-on-hover" type="button" id="spot-search-btn">disCOVER</button> <!--test before push-->
-          
-        </div>
-        <div class="spotify-container section">
-          <img src="" class="album-art" id="album-cover" />
-          <p id="track-details"></p>
+        <div class="wrap">
+          <button class="button">PLAY &#9654</button>
         </div>
       </div>
     </div>
-  </section>
-  <section class="section carousel-box">
-    <h2 class="genre-title has-text-centered" id="query-title"></h2>
-
-    <div class="genre-box">
-      <div class="dropdown artist-drop is-hoverable">
-        <div class="dropdown-trigger ">
-          <button class="button1" aria-haspopup="true" aria-controls="dropdown-menu4">
-            <span>Select Artist</span>
-            <span class="icon is-small">
-              <i class="fas fa-angle-down" aria-hidden="true"></i>
-            </span>
-          </button>
-        </div>
-        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-          <div class="dropdown-content artist-list">
-            <!-- these link to whereever we want -->
-            <!--Artists dynamically added here-->
-          </div>
-        </div>
-  
-      </div>
-      <div class="dropdown genre is-hoverable">
-        <div class="dropdown-trigger is-light is-rounded">
-          <button class="button2" aria-haspopup="true" aria-controls="dropdown-menu4">
-            <span>Genre</span>
-            <span class="icon is-small">
-              <i class="fas fa-angle-down" aria-hidden="true"></i>
-            </span>
-          </button>
-        </div>
-        <div class="dropdown-menu menu" id="dropdown-menu4" role="menu">
-          <div class="dropdown-content is-align genre">
-            <div class="dropdown-item">
-              <!-- these link to whereever we want -->
-              <a href="#!" class="dropdown-item has-text-dark">
-                Rock
-              </a>
-              <a href="#!" class="dropdown-item has-text-dark">
-                Pop
-              </a>
-              <a href="#!" class="dropdown-item has-text-dark">
-                LoFi
-              </a>
-              <a href="#!" class="dropdown-item has-text-dark">
-                Metal
-              </a>
-              <a href="#!" class="dropdown-item has-text-dark">
-                Acoustic
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-    <div class="container carousel-container"></div>
-    <div class="section return-home">
-      <button class="glow-on-hover home" type="button">
-        Go Home
-      </button>
-    </div> 
-</section>
-  
-  <footer>
-    <p>© Code Ninjas 2023</p>
+  </main>
+  <div class="footer">
+    <!-- Funny "warning" message -->
+    <h6>&#9888 DANGER &#9888 The use of this app will result in Extremely high levels of happiness and joy, Enjoy at
+      your own risk. © Code Ninjas 2023</h6>
+    <!-- APIs used for the app -->
     <p>Powered by Spotify and YouTube</p>
     <div class="links">
-      <ul>
-        <li>GitHub Links:</li>
+      <!-- GitHub accounts for the people who worked on this -->
+      <ul>GitHub Links:
         <li class="github-accounts">
           <a href="https://github.com/AlexC3105">AlexC3105</a>
         </li>
@@ -133,15 +60,14 @@
           <a href="https://github.com/sweetkloid">sweetkloid</a>
         </li>
         <li class="github-accounts">
-          <a href="https:github.com/CoolJH2K">CoolJH2K</a>
+          <a href="https://github.com/CoolJH2K">CoolJH2K</a>
         </li>
       </ul>
     </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
-  <!-- Connecting youtube API functions so that they can be called from script.js -->
-  <script src="assets/js/youtube-api.js"></script>
-  <script src="assets/js/script.js"></script>
+  </div>
+  <!-- Link to icons used for the app -->
+  <script src="https://kit.fontawesome.com/be4d87d601.js" crossorigin="anonymous"></script>
+  <script src="assets/js/homepage.js"></script>
 </body>
 
 </html>
