@@ -108,6 +108,7 @@ margin-bottom: 55px;
   border: 1px dotted #285f76 ;
 }
 
+/* Stylizes the menu and all its child elements */
 .menu,.submenu{
   margin:0;
   padding:0;
