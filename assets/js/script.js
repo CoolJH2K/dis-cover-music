@@ -130,14 +130,14 @@ async function extractYoutubeResults(queries) {
         newCard.classList.add(`card`, `m-1`);
         newCard.innerHTML = `
         <div class="card-image">
-            <figure>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <figure class="image is-4by3 is-clipped">
+                <iframe class="has-ratio" width="560px" height="315px" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </figure>
         </div>
         <div class="card-content">
             <div class="media">
-                    <a href="https://www.youtube.com/watch?v=${item.id.videoId}"><p class="">${item.snippet.title}</p></a>
-                </div>
+                <a href="https://www.youtube.com/watch?v=${item.id.videoId}"><p class="">${item.snippet.title}</p></a>
+            </div>
         </div>
         `;
         newCarousel.append(newCard);
