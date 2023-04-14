@@ -70,7 +70,9 @@ ul {
     display: inline-flex;
     gap: 5rem;
 }
-
+footer{
+   position: sticky;
+}
 footer ul li {
     margin: 3px;
 }
