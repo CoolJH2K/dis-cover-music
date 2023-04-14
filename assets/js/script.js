@@ -124,34 +124,25 @@ async function extractYoutubeResults(queries) {
     newCarousel.classList.add(`carousel`);
     carouselContainer.append(newCarousel);
 
-    //For each video create a card with a thumbnail and title
+    //For each video create a card with an embeded video and title
     searchResults.items.forEach(item => {
-        //Get data from the item returned before
-        var videoTitle = item.snippet.title;
-        var thumbnail = item.snippet.thumbnails.high.url;
-        var videoId = item.id.videoId;
-
-        //Create a div to contain the card
-        var videoCard = document.createElement(`div`);
-        videoCard.classList.add(`m-1`);
-        //Create the card
-        videoCard.innerHTML =
-        `
-        <div class="card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="${thumbnail}" alt="Placeholder image">
-                </figure>
-            </div>
-            <div class="card-content">
-                <!-- Add Youtube Data To Display here (?) -->
-                <a href="https://www.youtube.com/watch?v=${videoId}"><p class="">${videoTitle}</p></a>
-            </div>
+        var newCard = document.createElement(`div`);
+        newCard.classList.add(`card`, `m-1`);
+        newCard.innerHTML = `
+        <div class="card-image">
+            <figure>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </figure>
         </div>
-        `
-        //Append to the carousel the card
-        newCarousel.append(videoCard);
+        <div class="card-content">
+            <div class="media">
+                    <a href="https://www.youtube.com/watch?v=${item.id.videoId}"><p class="">${item.snippet.title}</p></a>
+                </div>
+        </div>
+        `;
+        newCarousel.append(newCard);
     });
+        
 
     //After building all the card, initialize the carousel
     bulmaCarousel.attach('.carousel', {
