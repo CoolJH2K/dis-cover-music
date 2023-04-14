@@ -7,6 +7,11 @@
     --magenta: #AE759F;
     --teal: #0BF6E4;
 }
+
+html{
+  background-color: var(--darkestpurple);
+}
+
 .hero-body {
   padding: 1rem;
 }
