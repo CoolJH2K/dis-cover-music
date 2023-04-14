@@ -39,7 +39,7 @@ background-color: var(--darkestpurple);
   border: 1px dotted #285f76;
   margin-left: -55px;
   font-size: 20px;
-  font-family: bolder,'Give You Glory';
+  font-family: bolder,'Roboto';
 
 }
 
@@ -47,9 +47,9 @@ background-color: var(--darkestpurple);
 .input {
   width: 475px;
   height: 50;
-  background-color: var(--lightpurple);
-  color:black;
-  font-family: bolder,'Give You Glory';
+  background-color: var(--midpurple);
+  color: var(--teal);
+  font-family: bolder,'Roboto';
 }
 /* locks input and bnt in center of page */
 .bnt{
@@ -66,7 +66,7 @@ margin-bottom: 55px;
 .genre-title{
   color: var(--lightpurple);
   font-size: 45px;
-  font-family: 'Give You Glory';
+  font-family: 'Roboto';
 }
 .button{
   margin-left: 10px;
@@ -97,8 +97,9 @@ margin-bottom: 55px;
   margin-left: 10px;
   border-radius: 30px;
   background: var(--lightpurple);
+  color: var(--teal);
   font-size: 25px;
-  font-family: bolder,'Give You Glory';
+  font-family: bolder,'Roboto';
   border: 1px dotted #285f76 ;
 }
 
@@ -202,7 +203,7 @@ margin-bottom: 55px;
     height: 40px;
     border: none;
     outline: none;
-    color: black;
+    color: var(--teal);
     background: var(--lightpurple);
     cursor: pointer;
     position: relative;
@@ -257,7 +258,7 @@ margin-bottom: 55px;
     100% { background-position: 0 0; }
 }
 .carousel-box{
-  background-color: rgb(31, 2, 55);
+  background-color: black;
 }
 /* putting home button in center */
 .return-home{
