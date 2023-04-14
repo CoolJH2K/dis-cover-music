@@ -68,8 +68,8 @@ margin-bottom: 55px;
     height: 40px;
     border: none;
     outline: none;
-    color: black;
-    background: var(--lightpurple);
+    color: var(--teal);
+    background: var(--midpurple);
     cursor: pointer;
     position: relative;
     z-index: 0;
@@ -134,7 +134,7 @@ background-color: var(--darkestpurple);
 
 }
 .carousel-box{
-  background-color: rgb(31, 2, 55);
+  background-color: black;
 }
 
 .title {
@@ -197,6 +197,8 @@ footer ul li a:hover {
   border-radius: 30px;
   background: var(--midpurple);
   font-size: large;
+  font-family: 'Roboto';
+  color: var(--teal);
 }
 
 .button2 {
@@ -207,6 +209,8 @@ footer ul li a:hover {
   border-radius: 30px;
   background: var(--midpurple);
   font-size: large;
+  font-family: 'Roboto';
+  color: var(--teal);
 }
 
 
