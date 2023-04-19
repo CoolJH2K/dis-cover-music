@@ -321,4 +321,31 @@ footer ul li a:hover {
 .clearfix{
   *zoom: 1; 
 } 
+img{
+  width:100%;
+  height: auto;
+  object-fit: contain;
+}
+/* Styles for large screens */
+@media only screen and (max-width: 1024px) {
+  img{
+    width:80%;
+    height: auto;
+  }
 
+
+}
+
+/* Styles for small screens */
+@media only screen and (min-width: 660px) {
+  img{
+    width: 80%;
+    height: auto;
+  }
+#track-details {
+  
+    flex-direction: column;
+
+    gap: 30px;
+}
+}
