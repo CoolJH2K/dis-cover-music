@@ -1,6 +1,7 @@
 var client_id = 'c0cb3e32a5f84f688b89b05ff48fd8f3';
 var client_secret = '71019c8014f843f79bd4f7bea6167a05';
-
+//storage of search history
+var lastSearchQuery= '';
 spotSearchButton = document.getElementById('spot-search-btn');
 albumArt = document.getElementById('album-cover');
 trackDetails = document.getElementById('track-details');
@@ -41,7 +42,9 @@ fetch('https://accounts.spotify.com/api/token', authOptions)
             window.searchSongs = function () {
                 // Get input value
                 var query = document.getElementById('input-track').value;
-
+                //saving items to local storage 
+                localStorage.setItem('lastSearchQuery', query); 
+                console.log(query);
                 // Make API request with the access token
                 fetch(`https://api.spotify.com/v1/search?type=track&q=${query}`, {
                     headers: {
@@ -107,6 +110,10 @@ fetch('https://accounts.spotify.com/api/token', authOptions)
 
 // add event listener to search button
 spotSearchButton.addEventListener('click', function () {
+    
+    var query= document.getElementById('input-track').value;
+    //saving items to local storage
+    localStorage.setItem('lastSearchQuery', query);
     searchSongs();
     //Set Timeout to make sure query title is changed before we update carousel
     setTimeout(updateCarousel,500);
@@ -189,4 +196,6 @@ const button = document.querySelector('.return-home');
 button.addEventListener('click', function() {
   window.location.href = 'index.html';
 });
+
+
 
