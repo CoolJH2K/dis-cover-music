@@ -285,7 +285,7 @@ footer {
   color: var(--teal);
   font-family: Roboto;
   padding: 10px 10px 0px 10px;
-  position: sticky;
+  position: fixed;
   text-align: center;
   width: 100%;
 }
@@ -333,9 +333,12 @@ img{
    
   }
   footer, footer ul{
-    font-size: xx-large;
+    
+    font-size: x-large;
   }
-
+  footer{
+    margin-top: 10px;
+  }
 }
 
 /* Styles for small screens */

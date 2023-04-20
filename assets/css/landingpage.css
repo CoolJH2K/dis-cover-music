@@ -16,6 +16,7 @@ html {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
     line-height: 1.5;
+    width: auto;
 }
 
 h1 {
@@ -60,8 +61,6 @@ header {
     font-family: Roboto;
     position: absolute;
     bottom: 0;
-    font-family: Roboto;
-
 }
 
 .column {
@@ -74,7 +73,7 @@ ul {
     gap: 5rem;
 }
 .footer{
-   position: sticky;
+   position: fixed;
 }
 .footer ul li {
     margin: 3px;
@@ -183,24 +182,35 @@ button:focus::after {
 }
 
 /* Styles for large screens */
-@media only screen and (max-width: 1200px) {
-    img{
-      width: 25%;
-     
+@media only screen and (min-width: 1300px) {
+    
+    .footer, .footer ul{
+        font-size: x-large;
     }
-    footer, footer ul{
-      font-size: xx-large;
-    }
-  
+  .footer{
+    position: fixed;
+  }
   }
 
 
 @media only screen and (max-width: 900px) {
-    .footer, .footer ul {
-        position: sticky;
+    .footer{
+            position: sticky;
+            display: flex;
+            flex-direction: column;
+            margin-top: 700px;
+            font-size: larger;
+    }
+    
+    .footer ul {
+      
         font-size: larger;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+    }
+    .footer il{
+        padding: 0;
+        margin: 0;
     }
 }
