@@ -322,30 +322,40 @@ footer ul li a:hover {
   *zoom: 1; 
 } 
 img{
-  width:100%;
+  width:25%;
   height: auto;
   object-fit: contain;
 }
 /* Styles for large screens */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1670px) {
   img{
-    width:80%;
-    height: auto;
+    width: 25%;
+   
   }
-
+  footer, footer ul{
+    font-size: xx-large;
+  }
 
 }
 
 /* Styles for small screens */
-@media only screen and (min-width: 660px) {
+@media only screen and (max-width: 800px) {
   img{
     width: 80%;
     height: auto;
   }
-#track-details {
-  
-    flex-direction: column;
-
-    gap: 30px;
+  .spotify-container{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  align-content: stretch;
+  flex-wrap: wrap;
+    
+}
+footer, footer ul{
+ font-size: xx-large;
+  display: flex;
+ flex-direction: column;
+ justify-content: space-around;
 }
 }
