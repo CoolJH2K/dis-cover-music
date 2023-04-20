@@ -285,7 +285,7 @@ footer {
   color: var(--teal);
   font-family: Roboto;
   padding: 10px 10px 0px 10px;
-  position: sticky;
+  position: fixed;
   text-align: center;
   width: 100%;
 }
@@ -321,4 +321,44 @@ footer ul li a:hover {
 .clearfix{
   *zoom: 1; 
 } 
+img{
+  width:25%;
+  height: auto;
+  object-fit: contain;
+}
+/* Styles for large screens */
+@media only screen and (max-width: 1670px) {
+  img{
+    width: 25%;
+   
+  }
+  footer, footer ul{
+    
+    font-size: x-large;
+  }
+  footer{
+    margin-top: 10px;
+  }
+}
 
+/* Styles for small screens */
+@media only screen and (max-width: 800px) {
+  img{
+    width: 80%;
+    height: auto;
+  }
+  .spotify-container{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  align-content: stretch;
+  flex-wrap: wrap;
+    
+}
+footer, footer ul{
+ font-size: xx-large;
+  display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+}
+}
